@@ -23,12 +23,11 @@ class Model
         // 実行するSQL
         $stmt = $this->db_manager->dbh->prepare('SELECT * FROM ' . $this->table . ' ORDER BY created DESC');
         // 準備したSQLを実行する
-
+        $stmt->execute();
         // 実行結果を取得
         $tasks = $stmt->fetchAll();
         // 値を返す
         return $tasks;
-
     }
 
     // idを指定してデータを1件取得するメソッド
@@ -36,8 +35,6 @@ class Model
     {
         // 実行するSQL
         $stmt = $this->db_manager->dbh->prepare('SELECT * FROM ' . $this->table . ' WHERE id = ?');
-
-
     }
 
 
@@ -45,7 +42,5 @@ class Model
     {
         // 実行するSQL
         $stmt = $this->db_manager->dbh->prepare('DELETE FROM ' . $this->table . ' WHERE id = ?');
-
-
     }
 }
