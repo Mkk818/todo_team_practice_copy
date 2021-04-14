@@ -5,28 +5,18 @@ require_once('Models/Task.php');
 
 $task = new Task;
 $tasks = $task->getAll();
-// 検証(デバッグ)
-// echo '<pre>';
-// var_dump($tasks);
-// die;
-// echo '</pre>';
 // task.phpはmodelクラスを継承したもの
 require_once('function.php');
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Todoアプリ</title>
-    <!-- <style>
-        ul {
-            list-style-type: none;
-        }
-    </style> -->
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -34,7 +24,7 @@ require_once('function.php');
     <div class="main">
         <div class="menu">
             <div class="menu-bar">
-                <nav class="navbar navbar-col bg-col">
+                <nav>
                     <a href="index.php" class="navbar-top">Todo_team_practice</a>
                     <ul class="nav nav-menu">
                         <li class="nav-item">
@@ -45,21 +35,8 @@ require_once('function.php');
                         <li class="nav-item">
                            <a class="nav-link text-light" href="create.php">Create</a>
                         </li>
-                        <li class="nav-item">
-                           <a class="nav-link text-light" href="signupForm.php">Sign up</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link text-light" href="signinForm.php">Sign in</a></li>
-                        <li class="nav-item">
-                           <a class="nav-link text-light" href="signout.php">Sign out</a></li>
-                        <li class="nav-item">
-                            <form class="form-inline" method="GET">
-                                <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="title">
-                                <button type="submit">Search</button>
-                            </form>
-                        </li>
                     </ul>
-                </nav><!-- navbar navbar-col bg-col -->
+                </nav>
             </div><!-- menu-bar -->
         </div><!-- menu -->
         <div class="menu2">
