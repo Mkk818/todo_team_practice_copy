@@ -1,6 +1,6 @@
 <?php
 // ファイルの読み込み
-require_once('Models/Model.php');
+require_once('Models/Task.php');
 
 // データの受け取り(スーパーグローバル変数)
 $title=$_POST['title'];

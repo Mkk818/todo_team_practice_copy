@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Todoアプリ</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="./style.css"> -->
 </head>
 <body>
     <div class="header">
@@ -18,7 +17,7 @@
         <form action="store.php" method="post">
 
             <div class="title">  
-                <label for>Title</label>
+                <label for="title">Title</label>
                 <input type="text" name="title" id="title" size="100">
         
              </div>
@@ -32,7 +31,9 @@
                 <input type="file"name="file">
             </div> -->
     
-            <input type="button" value="送信">
+            <button type="submit" value="送信">
+            <!-- ボタンのCSSは今後修正します -->
+            
 
         </form>
 </body>
