@@ -11,7 +11,7 @@ class Task extends Model
     public function create($datas)
     {
         // 実行するSQL
-        $stmt = $this->db_manager->dbh->prepare('INSERT INTO ' . $this->table . ' (title, contents, created) VALUES (?, ?, ?)');
+        $stmt = $this->db_manager->dbh->prepare('INSERT INTO ' . $this->table . ' (title, contents) VALUES (?, ?)');
         $stmt->execute($datas);
 
     }

@@ -14,11 +14,12 @@
          <a href="index.php">Todoアプリ</a>
         </nav>    
     </div>
+    <div class="form">
         <form action="store.php" method="post">
 
             <div class="title">  
                 <label for="title">Title</label>
-                <input type="text" name="title" id="title" size="100">
+                <input type="text" name="title" id="title">
         
              </div>
 
@@ -27,14 +28,12 @@
                 <textarea name="contents" id="contents" rows="10" cols="100"></textarea>
             </div>
 
-            <!-- <div class="file">
-                <input type="file"name="file">
-            </div> -->
-    
-            <button type="submit" value="送信">
-            <!-- ボタンのCSSは今後修正します -->
-            
-
+            <div class="submit-button">
+             <button type="submit">送信</button>
+                <!-- ボタンのCSSは今後修正します -->
+            </div>
+       
         </form>
+    </div>
 </body>
 </html>
