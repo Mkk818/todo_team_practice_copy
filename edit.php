@@ -1,4 +1,10 @@
 <?php
+require_once('Models/Task.php');
+require_once('function.php');
+
+$id = $GET['id'];
+$task = new Task();
+$task = $task->findById($id);
 
 
 ?>

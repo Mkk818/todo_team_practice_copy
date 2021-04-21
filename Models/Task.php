@@ -17,11 +17,10 @@ class Task extends Model
     }
 
     // タスクを更新するメソッド
-    public function update()
-    {
+    public function update($title, $contents, $id){
         // 実行するSQL
         $stmt = $this->db_manager->dbh->prepare('UPDATE ' . $this->table . ' SET title = ?, contents = ? WHERE id = ?');
-
+        $stmt->execute([$title, $contents, $id]);
 
     }
 
