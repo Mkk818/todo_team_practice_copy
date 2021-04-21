@@ -1,5 +1,57 @@
 /* create & edit ページ */
 
+.headerbar{
+    background-color: black;
+    padding: 15px;
+    margin-bottom: 10px;
+
+}
+
+.headerbar a{
+    text-decoration: none;
+    color: seashell;
+
+}
+
+.form{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+      
+input{ 
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+ 
+
+}
+
+textarea{
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+
+}
+
+#contents{
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+button{
+
+    height: 30px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    background-color:blue;
+    color:white;
+    float: right;
+
+}
+    
+
 
 
 /* index ページ */
