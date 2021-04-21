@@ -28,13 +28,13 @@ $task = $task->findById($id);
 
             <div class="title">  
                 <label for="title">Title</label>
-                <input type="text" name="title" id="title">
+                <input type="text" name="title" id="title" value="<?= $task['title']; ?>">
         
              </div>
 
             <div class="contents">
                 <label for="contents">Contents</label>
-                <textarea name="contents" id="contents" rows="10" cols="100"></textarea>
+                <textarea name="contents" id="contents" rows="10" cols="100"><?= $task['contents'] ?></textarea>
             </div>
             <input type="hidden" name="id" value="<?= h($task['id']); ?>">
             <div class="submit-button">
