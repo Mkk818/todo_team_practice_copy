@@ -2,8 +2,8 @@
 require_once('Models/Task.php');
 
 $title = $_POST['title'];
-$contents = $POST['contents'];
-$id = $POST['id'];
+$contents = $_POST['contents'];
+$id = $_POST['id'];
 
 $task = new Task();
 $task->update($title, $contents, $id);
