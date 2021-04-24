@@ -20,50 +20,47 @@ require_once('function.php');
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
+<body class="index-body">
     <div class="main">
+        <header>
+            <a href="index.php" class="header-left">Todo</a>
+            <div class="nav-item">
+                <a class="text-right" href="create.php">Create</a>
+            </div>
+        </header>
         <div class="menu">
-            <div class="menu-bar">
-                <nav>
-                    <a href="index.php" class="navbar-top">Todo_team_practice</a>
-                    <ul class="nav nav-menu">
-                        <li class="nav-item">
-                            <a class="nav-link text-right">
-                                <!-- ログインしていればURL表示 -->
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link text-light" href="create.php">Create</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div><!-- menu-bar -->
-        </div><!-- menu -->
-        <div class="menu2">
             <div class="col">
                 <!-- foreachでコロン構文 -->
-                    <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">
+                <div class="card">
+                    <script type="text/javascript">
+                        var imglist = new Array(
+                            "./img/Todolist-rafiki.png",
+                            "./img/Todolist-amico.png",
+                            "./img/Todolist-cuate.png",
+                        );
+                        var selectnum = Math.floor(Math.random() * imglist.length);
+                        var output = "<img src=" + imglist[selectnum] + ">";
+                        document.write(output);
+                    </script>
+                    <h5 class="card-title">
                         <!-- ここにタイトル -->
-                        </h5>
-                        <p class="card-text">
-                            <!-- ここにテキスト -->
-                        </p>
-                        <div class="text-right">
-                            <!-- href内を変更 -->
-                            <a href="edit.php" class="btn text-success">EDIT</a>
-                            <form action="delete.php" method="POST">
-                                <!-- *valueの中にtaskのidが入るようにする -->
-                                <input type="hidden" name="id" value="">
-                                <button type="submit" class="btn text-danger">DELETE</button>
-                            </form>
-                        </div><!-- text-right -->
-                    </div><!-- card-body -->
+                    </h5>
+                    <p class="card-text">
+                        <!-- ここにテキスト -->
+                    </p>
+                    <div class="text-right">
+                        <!-- href内を変更 -->
+                        <a href="edit.php" class="btn text-success">EDIT</a>
+                        <form action="delete.php" method="POST">
+                            <!-- *valueの中にtaskのidが入るようにする -->
+                            <input type="hidden" name="id" value="">
+                            <button type="submit" class="btn text-danger">DELETE</button>
+                        </form>
+                    </div><!-- text-right -->
                 </div><!-- card -->
             </div><!-- col -->
-            <!-- php終了文書く -->
-        </div><!-- menu2 -->
+        </div><!-- menu -->
+        <!-- php終了文書く -->
     </div><!-- main -->
 </body>
 
