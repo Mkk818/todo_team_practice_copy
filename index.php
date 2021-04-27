@@ -40,29 +40,31 @@ require_once('function.php');
             </div><!-- menu-bar -->
         </div><!-- menu -->
         <div class="menu2">
-            <div class="col">
-                <!-- foreachでコロン構文 -->
+            <?php foreach ($tasks as $task) : ?>
+            <div class="col">            
                     <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">
-                        <!-- ここにタイトル -->
+                            <!-- タイトルを表示させる -->
+                            <?php echo h($task["title"]); ?>
                         </h5>
                         <p class="card-text">
-                            <!-- ここにテキスト -->
+                            <!-- コンテンツを表示させる -->
+                            <?php echo h($task["contents"]); ?>
                         </p>
                         <div class="text-right">
-                            <!-- href内を変更 -->
-                            <a href="edit.php" class="btn text-success">EDIT</a>
+                            <!-- updateの時にidを送る -->
+                            <a href="edit.php?id=<?php echo h($task['id']); ?>" class="btn text-success">EDIT</a>
                             <form action="delete.php" method="POST">
-                                <!-- *valueの中にtaskのidが入るようにする -->
-                                <input type="hidden" name="id" value="">
+                                <!-- deleteの時にidを送る -->
+                                <input type="hidden" name="id" value="<?php echo h($task['id']); ?>">
                                 <button type="submit" class="btn text-danger">DELETE</button>
                             </form>
                         </div><!-- text-right -->
                     </div><!-- card-body -->
                 </div><!-- card -->
             </div><!-- col -->
-            <!-- php終了文書く -->
+            <?php endforeach; ?>
         </div><!-- menu2 -->
     </div><!-- main -->
 </body>
