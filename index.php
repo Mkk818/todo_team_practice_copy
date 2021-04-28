@@ -30,7 +30,7 @@ require_once('function.php');
         </header>
         <div class="menu">
             <div class="col">
-                <!-- foreachでコロン構文 -->
+                <?php foreach ($tasks as $task) : ?>
                 <div class="card">
                     <script type="text/javascript">
                         var imglist = new Array(
@@ -43,24 +43,25 @@ require_once('function.php');
                         document.write(output);
                     </script>
                     <h5 class="card-title">
-                        <!-- ここにタイトル -->
+                        <!-- タイトルを表示させる -->
+                         <?php echo h($task["title"]); ?>
                     </h5>
                     <p class="card-text">
-                        <!-- ここにテキスト -->
+                        <!-- コンテンツを表示させる -->
+                        <?php echo h($task["contents"]); ?>
                     </p>
                     <div class="text-right">
-                        <!-- href内を変更 -->
-                        <a href="edit.php" class="btn text-success">EDIT</a>
+                        <a href="edit.php?id=<?php echo h($task['id']); ?>" class="btn text-success">EDIT</a>
                         <form action="delete.php" method="POST">
-                            <!-- *valueの中にtaskのidが入るようにする -->
-                            <input type="hidden" name="id" value="">
-                            <button type="submit" class="btn text-danger">DELETE</button>
+                            <!-- deleteの時にidを送る -->
+                                <input type="hidden" name="id" value="<?php echo h($task['id']); ?>">
+                                <button type="submit" class="btn text-danger">DELETE</button>
                         </form>
                     </div><!-- text-right -->
                 </div><!-- card -->
             </div><!-- col -->
         </div><!-- menu -->
-        <!-- php終了文書く -->
+        <?php endforeach; ?>
     </div><!-- main -->
 </body>
 

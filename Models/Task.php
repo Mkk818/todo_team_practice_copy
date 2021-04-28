@@ -8,20 +8,21 @@ class Task extends Model
     protected $table = 'tasks';
 
     // タスク作成のメソッド
-    public function create()
+    public function create($datas)
     {
         // 実行するSQL
-        $stmt = $this->db_manager->dbh->prepare('INSERT INTO ' . $this->table . ' (title, contents, created) VALUES (?, ?, ?)');
-
+        $stmt = $this->db_manager->dbh->prepare('INSERT INTO ' . $this->table . ' (title, contents) VALUES (?, ?)');
+        $stmt->execute($datas);
 
     }
 
+
+
     // タスクを更新するメソッド
-    public function update()
-    {
+    public function update($title, $contents, $id){
         // 実行するSQL
         $stmt = $this->db_manager->dbh->prepare('UPDATE ' . $this->table . ' SET title = ?, contents = ? WHERE id = ?');
-
+        $stmt->execute([$title, $contents, $id]);
 
     }
 
