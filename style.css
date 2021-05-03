@@ -1,5 +1,76 @@
 /* create & edit ページ */
 
+*{
+    font-family: Copperplate, sans-serif;
+
+}
+
+.headerbar{
+    background-color: rgb(244,197,0);
+    padding: 15px;
+    margin:0 0;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+
+
+
+
+}
+
+.headerbar a{
+    text-decoration: none;
+    color: seashell;
+
+}
+
+.form{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+
+}
+      
+input{ 
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+
+ 
+
+}
+
+textarea{
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+   
+
+}
+
+#contents{
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+  
+}
+
+button{
+
+    height: 50px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    background-color:rgb(244,197,0);
+    color:black;
+    float: right;
+    font-size: 25px;
+    border-color: rgb(244,197,0);
+    
+}
+    
+
 
 
 /* index ページ */
