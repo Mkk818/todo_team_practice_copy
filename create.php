@@ -11,7 +11,7 @@
 <body>
     <div class="header">
         <nav class="headerbar">        
-         <a href="index.php">Todoアプリ</a>
+         <a href="index.php">Todo</a>
         </nav>    
     </div>
     <div class="form">
@@ -29,8 +29,7 @@
             </div>
 
             <div class="submit-button">
-             <button type="submit">送信</button>
-                <!-- ボタンのCSSは今後修正します -->
+             <button type="submit">GO</button>
             </div>
        
         </form>
