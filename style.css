@@ -1,3 +1,15 @@
+/* 全体 */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family:
+    /* 'Lucida Grande', */
+    /* 'Gill Sans', */
+    'Copperplate',
+    sans-serif;
+    color: #2a2b2f;
+}
 /* create & edit ページ */
 
 *{
@@ -74,5 +86,59 @@ button{
 
 
 /* index ページ */
+/* body */
+.index-body {
+    background-color: #fff;
+}
+/* header */
+header {
+    background-color: #f5c500;
+    padding: 20px;
+}
+
+.header-left {
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 10px 5px 3px rgba(0, 0, 0, 0.3);
+}
+
+header, .text-right {
+    display: flex;
+    justify-content: space-between;
+}
 
 
+/* TODOリスト */
+.menu {
+    padding: 10px ;
+}
+.card {
+    width: calc(100% / 3);
+    height: 80%;
+    border: 1px solid #bfbfbe;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #F5F5F5;
+}
+img {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+.card > .text-right {
+    padding: 20px;
+    font-size: 30px;
+    text-shadow: 10px 5px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* DELETEボタン */
+button {
+    background-color:#f5c500;
+    border-style: none;
+    padding: 10px;
+    border-radius: 5rem;
+    font-size: 20px;
+    color: #fff;
+    box-shadow: 10px 5px rgba(0, 0, 0, 0.3);
+
+}

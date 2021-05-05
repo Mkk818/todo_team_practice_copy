@@ -20,52 +20,48 @@ require_once('function.php');
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
+<body class="index-body">
     <div class="main">
+        <header>
+            <a href="index.php" class="header-left">Todo</a>
+            <div class="nav-item">
+                <a class="text-right" href="create.php">Create</a>
+            </div>
+        </header>
         <div class="menu">
-            <div class="menu-bar">
-                <nav>
-                    <a href="index.php" class="navbar-top">Todo_team_practice</a>
-                    <ul class="nav nav-menu">
-                        <li class="nav-item">
-                            <a class="nav-link text-right">
-                                <!-- ログインしていればURL表示 -->
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link text-light" href="create.php">Create</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div><!-- menu-bar -->
-        </div><!-- menu -->
-        <div class="menu2">
-            <?php foreach ($tasks as $task) : ?>
-            <div class="col">            
-                    <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <!-- タイトルを表示させる -->
-                            <?php echo h($task["title"]); ?>
-                        </h5>
-                        <p class="card-text">
-                            <!-- コンテンツを表示させる -->
-                            <?php echo h($task["contents"]); ?>
-                        </p>
-                        <div class="text-right">
-                            <!-- updateの時にidを送る -->
-                            <a href="edit.php?id=<?php echo h($task['id']); ?>" class="btn text-success">EDIT</a>
-                            <form action="delete.php" method="POST">
-                                <!-- deleteの時にidを送る -->
+            <div class="col">
+                <?php foreach ($tasks as $task) : ?>
+                <div class="card">
+                    <script type="text/javascript">
+                        var imglist = new Array(
+                            "./img/Todolist-rafiki.png",
+                            "./img/Todolist-amico.png",
+                            "./img/Todolist-cuate.png",
+                        );
+                        var selectnum = Math.floor(Math.random() * imglist.length);
+                        var output = "<img src=" + imglist[selectnum] + ">";
+                        document.write(output);
+                    </script>
+                    <h5 class="card-title">
+                        <!-- タイトルを表示させる -->
+                         <?php echo h($task["title"]); ?>
+                    </h5>
+                    <p class="card-text">
+                        <!-- コンテンツを表示させる -->
+                        <?php echo h($task["contents"]); ?>
+                    </p>
+                    <div class="text-right">
+                        <a href="edit.php?id=<?php echo h($task['id']); ?>" class="btn text-success">EDIT</a>
+                        <form action="delete.php" method="POST">
+                            <!-- deleteの時にidを送る -->
                                 <input type="hidden" name="id" value="<?php echo h($task['id']); ?>">
                                 <button type="submit" class="btn text-danger">DELETE</button>
-                            </form>
-                        </div><!-- text-right -->
-                    </div><!-- card-body -->
+                        </form>
+                    </div><!-- text-right -->
                 </div><!-- card -->
             </div><!-- col -->
-            <?php endforeach; ?>
-        </div><!-- menu2 -->
+        </div><!-- menu -->
+        <?php endforeach; ?>
     </div><!-- main -->
 </body>
 
