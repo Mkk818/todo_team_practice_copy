@@ -21,7 +21,7 @@ class Model
     public function getAll()
     {
         // 実行するSQL
-        $stmt = $this->db_manager->dbh->prepare('SELECT * FROM ' . $this->table . ' ORDER BY created DESC');
+        $stmt = $this->db_manager->dbh->prepare('SELECT * FROM ' . $this->table);
         // 準備したSQLを実行する
         $stmt->execute();
         // 実行結果を取得
@@ -31,20 +31,22 @@ class Model
     }
 
     // idを指定してデータを1件取得するメソッド
-    public function findById($id){
-    
+    public function findById($id)
+    {
+
         // 実行するSQL
         $stmt = $this->db_manager->dbh->prepare('SELECT * FROM ' . $this->table . ' WHERE id = ?');
-        
+
         $stmt->execute([$id]);
         $task = $stmt->fetch();
         return $task;
     }
 
 
-    public function delete()
+    public function delete($id)
     {
         // 実行するSQL
         $stmt = $this->db_manager->dbh->prepare('DELETE FROM ' . $this->table . ' WHERE id = ?');
+        return $stmt->execute([$id]);
     }
 }
