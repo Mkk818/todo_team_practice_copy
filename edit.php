@@ -20,7 +20,7 @@ $task = $task->findById($id);
 <body>
 <div class="header">
         <nav class="headerbar">        
-         <a href="index.php">Todoアプリ</a>
+         <a href="index.php">Todo</a>
         </nav>    
     </div>
     <div class="form">
@@ -38,7 +38,7 @@ $task = $task->findById($id);
             </div>
             <input type="hidden" name="id" value="<?= h($task['id']); ?>">
             <div class="submit-button">
-             <button type="submit">更新</button>
+             <button type="submit">EDIT</button>
             </div>
        
         </form>
