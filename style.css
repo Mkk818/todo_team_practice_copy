@@ -90,10 +90,14 @@ header, .text-right {
 
 /* TODOリスト */
 .menu {
-    padding: 10px ;
+    display: flex;
+    padding: 20px;
+    margin: 20px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 .card {
-    width: calc(100% / 3);
+    width: calc(100% / 3.5);
     height: 80%;
     border: 1px solid #bfbfbe;
     padding: 20px;
