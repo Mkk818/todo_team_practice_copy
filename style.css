@@ -97,7 +97,7 @@ header, .text-right {
     flex-wrap: wrap;
 }
 .card {
-    width: calc(100% / 3.5);
+    width: calc(100% / 3);
     height: 80%;
     border: 1px solid #bfbfbe;
     padding: 20px;
